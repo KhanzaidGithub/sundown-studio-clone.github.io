@@ -9,6 +9,7 @@ body {
     width: 100%;
     font-family: "poppins", sans-serif;
     box-sizing: border-box;
+    background-color: #efeae3;
 }
 
 #page1 {
@@ -172,7 +173,9 @@ nav {
 #page2 {
     min-height: 30vh;
     width: 100%;
+    background-color: #efeae3;
     padding-top: 5vw;
+    position: relative;
 }
 
 #moving-text {
@@ -220,15 +223,20 @@ nav {
     height: 80vh;
     width: 95%;
     margin: auto;
-    background-color: aliceblue;
     display: flex;
     align-items: center;
+    padding: 0vw 2vw 0vw 2vw;
     justify-content: space-between;
+    position: relative;
+    z-index: 9;
+    margin-bottom: 6vw;
 }
 
 #page2-bottom h1 {
-    font-size: 3vw;
-    width: 50%;
+    font-size: 3em;
+    font-weight: 600;
+    color: black;
+    width: 55%;
 }
 
 #bottom-part2 {
@@ -242,4 +250,84 @@ nav {
 
 #bottom-part2 p {
     font-weight: 100;
+    margin-top: 40px;
+}
+
+#page2-backgola {
+    width: 35vw;
+    height: 65vh;
+    background: linear-gradient(to top, #fe330a, #fe530a);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: scdgola;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+}
+
+@keyframes scdgola {
+    from {
+        transform: translate(10%, -10%)skew(0);
+    }
+
+    to {
+        transform: translate(-10%, 10%)skew(-12deg);
+    }
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+}
+
+
+
+.elem {
+    position: relative;
+    height: 130px;
+    width: 100;
+    /* background-color: orange; */
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding: 0vw 2vw;
+    border-top: 1px solid #00000037;
+    border-bottom: 1px solid #00000037;
+}
+
+.elem #overlay {
+    background-color: orange;
+    width: 100%;
+    height: 130px;
+    left: 0;
+    position: absolute;
+    top: -130px;
+    transition: all ease 0.2s;
+}
+
+.elem:hover #overlay {
+    top: 0px;
+}
+
+.elem h2 {
+    font-size: 3vw;
+    z-index: 2;
+}
+
+#fixed-img {
+    height: 65vh;
+    width: 25vw;
+    background-color: blue;
+    border-radius: 10px;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    z-index: 222;
+    display: none;
+    background-size: cover;
 }
