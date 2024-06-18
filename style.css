@@ -170,18 +170,76 @@ nav {
 }
 
 #page2 {
-    min-height: 100vh;
+    min-height: 30vh;
     width: 100%;
-    background-color: orange;
+    padding-top: 5vw;
+}
+
+#moving-text {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 #moving-text h1 {
     font-size: 9vw;
+    display: inline-block;
 }
 
 #gola {
     height: 70px;
     width: 70px;
+    display: inline-block;
     background-color: #fe330a;
     border-radius: 50%;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom {
+    height: 80vh;
+    width: 95%;
+    margin: auto;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page2-bottom h1 {
+    font-size: 3vw;
+    width: 50%;
+}
+
+#bottom-part2 {
+    width: 20%;
+}
+
+#bottom-part2 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#bottom-part2 p {
+    font-weight: 100;
 }
